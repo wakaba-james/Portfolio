@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Section</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+  .about-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-section img {
+    width: 250px; /* Adjust the size as needed */
+    height: 275px;
+    border-radius: 50%; /* Makes the image round */
+    margin-bottom: 20px;
+  }
+  .about-section p {
+    color: #333;
+  }
+
+  /* Additional CSS for Projects Section */
+.projects-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+}
+h4{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.card-img-top {
+  max-height: 180px; /* Adjust this value to fit the image properly in the card */
+  object-fit: cover; /* This makes sure the image covers the area properly */
+}
+.card-body {
+  padding: 15px;
+}
+.card-title {
+  font-size: 1.25rem;
+}
+.card-text {
+  margin-bottom: 15px;
+}
+
+/* Additional CSS for Skills Section */
+.skills-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.skills-section .card {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.skills-section .card-img-top {
+  padding: 20px; /* Add padding around your images if needed */
+  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
+  height: 180px; /* Fixed height for consistency */
+  object-fit: contain; /* This will make sure the image is scaled properly within the container */
+}
+.skills-section .card-body {
+  padding: 15px;
+}
+.skills-section .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+.skills-section .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+.skills-section .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.contact{
+  align-items: start;
+  text-align: start;
+  padding: 5px;
+}
+
+/* Additional CSS for Contact Section */
+.contact-section {
+  padding: 50px 0;
+}
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.social-icon {
+  width: 30px; /* Size of your icons */
+  margin-bottom: 10px;
+}
+/* Hover effect for icons */
+.social-icon:hover {
+  opacity: 0.7;
+}
+/* Style for links in the Contact section */
+.contact-section a {
+  color: #fff;
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows for margin on the bottom */
+  margin-bottom: 10px;
+}
+.contact-section a:hover {
+  color: #ddd; /* Color when hovering over the link */
+}
+
+/* CSS for Sticky Navbar */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+}
+
+/* Ensure padding is added to body to avoid content being hidden behind the navbar */
+body { 
+  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for navigation bar links */
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+}
+
+/* Media query for responsive navbar collapsing */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #343a40; /* Same as navbar color for seamless look */
+  }
+}
+
+.image-row {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  max-width: 100%; /* Ensures images do not overflow their container */
+  overflow: hidden; /* Hides any overflow */
+  margin: 0 auto; /* Centers the images */
+  
+}
+
+.image-wrapper {
+ /* Each image takes up 50% of the container's width minus margin */
+  margin: 10px; /* Adjust margins between images */
+  max-width: 100%; /* Ensures images do not exceed their natural size */
+  text-align: center; /* Center images horizontally */
+}
+
+.image-wrapper img {
+  max-width: 100%; /* Ensures images do not exceed their natural size */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes any extra space below images */
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 900px) {
+
+  .image-row{
+    padding: 10px;
+    flex-wrap:wrap ;
+  }
+  .image-wrapper img{
+      flex: 100%; 
+      flex-wrap: wrap;
+      display: block;
+      padding-bottom: 15px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<section id='about' class="about-section">
+  <div class="container">
+    <h2>About</h2>
+    <img src="images/about/1.jpg" alt="About Me">
+    <p>Highly motivated Computer Scientist with a strong aptitude for problem-solving and creative thinking. Possessing one year of 
+      valuable experience in the field, I am passionate about generating innovative ideas and successfully bringing them to fruition. </p>
+    <p>I hold a Bachelor's degree in Computer Science and have been recognized by multiple seasoned Data engineers for my exceptional potential as a 
+      Data analysts. A typical day in my life involves seamlessly integrating the art of Models design with my proficient programming 
+      skills to produce models that are not only with high accuracy but also easily comprehensible. </p>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light" id="projects">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/1.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Weather Data Analysis</h5>
+            <p class="card-text">
+              Weather data analysis uses meteorological parameters to predict trends and patterns, aiding sectors like agriculture and transportation. Techniques include data cleaning, exploratory analysis, and statistical modeling, which require accuracy and interdisciplinary collaboration to manage weather complexity effectively.</p>
+      
+            <a href="https://github.com/wakaba-james/Weather_Data_analysis/blob/main/Weather_Data_Analysis/weather_data_analysis.ipynb" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/2.png" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Predicting home prices </h5>
+            <p class="card-text">Predicting home prices involves analyzing factors such as location, size, and market trends using regression and machine learning. This informs decisions on pricing, investments, and market timing, though challenges include data quality and model accuracy in fluctuating real estate markets.</p>
+      
+            <a href="https://github.com/wakaba-james/linear_regression_multivariate./blob/main/linear_regression_multivariate.ipynb" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/3.png" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">EDA Process</h5>
+            <p class="card-text">Exploratory Data Analysis (EDA) involves summarizing the main characteristics of a dataset through visual methods and statistical summaries. It aims to understand data structure, detect patterns, identify outliers, and form hypotheses for further analysis.</p>
+        
+            <a href="https://github.com/wakaba-james/EDA_process/blob/main/EDA%20(2).ipynb" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white" id="skills">
+  <div class="container">
+    <h2 class="text-center">Skills</h2>
+    <div class="row">
+      <!-- Skill 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/1.png" class="card-img-top" alt="Python">
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">
+            
+              
+              In Python, I excel in data analysis using NumPy and Pandas for tasks like data cleaning, transformation, and statistical analysis. I have experience implementing machine learning algorithms with Scikit-learn for data preprocessing, model training, and evaluation. My skills in Python allow me to effectively manipulate data, perform detailed statistical analyses, and derive meaningful insights from datasets.</p>
+          </div>
+        </div>
+      </div>
+        <!-- Skill 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/4.png" class="card-img-top" alt="Data Visualization">
+            <div class="card-body">
+              <h5 class="card-title">R Programming</h5>
+              <p class="card-text">
+              
+              I utilize Matplotlib and Seaborn to create clear and informative plots, including histograms, scatter plots, and bar charts. These visuals help uncover patterns and relationships within datasets, enabling better decision-making based on data-driven insights.</p>
+            </div>
+          </div>
+        </div>
+      <!-- Skill 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+          <div class="card-body">
+            <h5 class="card-title">Data Visualization</h5>
+            <p class="card-text">
+            
+            I utilize Matplotlib and Seaborn to create clear and informative plots, including histograms, scatter plots, and bar charts. These visuals help uncover patterns and relationships within datasets, enabling better decision-making based on data-driven insights.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+          <div class="card-body">
+            <h5 class="card-title">SQL</h5>
+            <p class="card-text">
+  
+              As a data analyst, I leverage strong SQL skills to extract and manipulate data effectively. Proficient in crafting optimized queries, conducting joins, and utilizing advanced functions, I transform complex datasets into actionable insights that drive informed decision-making. My ability to streamline data processing and deliver clear, concise analysis empowers organizations to make strategic business decisions with confidence.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 4 -->
+ 
+    </div>
+  </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white" id="skills">
+<div class="container">
+  <div class="row">
+    <!-- Skill 1 -->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card">
+        <img src="images/skills/0.png" class="card-img-top" alt="Python">
+        <div class="card-body">
+          <h5 class="card-title">Power Bi</h5>
+          <p class="card-text">
+            I specialize in transforming data into actionable insights through interactive dashboards and reports. I leverage its robust querying and visualization capabilities to integrate and analyze diverse data sources, applying advanced data modeling and calculations to drive informed decision-making across organization
+           </p>
+        </div>
+      </div>
+    </div>
+     
+  </div>
+</section>
+
+
+<!-- Visualizatio dashboard section -->
+<h4>Dashboards</h4>
+<section class="image-row">
+  
+  <div class="image-wrapper">
+    <h6>Coffee dashboard</h6>
+      <img src="./images/dashboards/1.PNG" alt="Image 1">
+  </div>
+  <div class="image-wrapper">
+    <h6>Netflix Movies dashboard</h6>
+      <img src="./images/dashboards/2.PNG" alt="Image 2">
+  </div>
+</section>
+
+
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section text-center text-white bg-dark">
+  <div class="container">
+    <h2>Contact Me</h2>
+     <div class="contact">
+      <div class="col-lg-6">
+        <p><i class="fas fa-envelope"></i>jameskinyanjui721@gmail.com</p>
+        <p><i class="fas fa-phone"></i>+254797030918</p>
+      </div>
+     </div>
+  
+
+  
+    <div class="row">
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://www.linkedin.com/in/james-wakaba-37bb67197/" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://github.com/wakaba-james" target="_blank">
+          <img src="icons/github.png" alt="GitHub" class="social-icon">
+          GitHub
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
